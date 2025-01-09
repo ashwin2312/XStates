@@ -19,9 +19,13 @@ export default function States() {
   const citiesAPI = `https://crio-location-selector.onrender.com/country=${countryName}/state=${stateName}/cities`;
 
   const getCountries = async () => {
-    const response = await fetch(countriesAPI);
-    const countriesData = await response.json();
-    setCountryList(countriesData);
+    try {
+      const response = await fetch(countriesAPI);
+      const countriesData = await response.json();
+      setCountryList(countriesData);
+    } catch (error) {
+      console.error(error);
+    }
     // console.log("countries::", countriesData);
   };
 

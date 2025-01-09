@@ -1,0 +1,9 @@
+.selectContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.selectContainer select{
+    padding: 10px;
+
+}
